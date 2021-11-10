@@ -104,7 +104,7 @@ static int letter(int n, int pos, unsigned char im[70 * 200], unsigned char swr[
       *x = (*p) << 4;
     i++;
   }
-  return mpos + 3;
+  return mpos + 13;
 }
 
 #define NDOTS 10
@@ -198,7 +198,7 @@ static void filter(unsigned char im[70 * 200])
   memmove(im, om, sizeof(om));
 }
 
-static const char *letters = "abcdafahijklmnopqrstuvwxyz";
+static const char *letters = "1234567890123456789012345";
 
 void captcha(unsigned char im[70 * 200], unsigned char l[8], int length, int i_line, int i_filter)
 {
