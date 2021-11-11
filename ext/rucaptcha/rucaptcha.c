@@ -198,7 +198,7 @@ static void filter(unsigned char im[70 * 200])
   memmove(im, om, sizeof(om));
 }
 
-static const char *letters = "1234567890123456789012345";
+static const char *letters = "1234567890";
 
 void captcha(unsigned char im[70 * 200], unsigned char l[8], int length, int i_line, int i_filter)
 {
@@ -219,7 +219,7 @@ void captcha(unsigned char im[70 * 200], unsigned char l[8], int length, int i_l
   int x;
   for (x = 0; x < length; x++)
   {
-    l[x] %= 25;
+    l[x] %= 10;
   }
   for (x = length; x < 8; x++)
   {
